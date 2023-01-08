@@ -158,7 +158,7 @@ Next, we can include our app in our project by adding it to the list of installe
 # Application definition
 
 INSTALLED_APPS = [
-		'api.apps.TodoConfig',
+		"api",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -380,7 +380,7 @@ We have to add DRF to our list of installed apps, same as we did with our todo a
 # Application definition
 
 INSTALLED_APPS = [
-    'api.apps.TodoConfig',
+    "api",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
