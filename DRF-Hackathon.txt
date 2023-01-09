@@ -1,0 +1,42 @@
+*********************************** SETUP ************************************************
+      
+        WINDOWS                           |                UNIX
+                                          |
+1 - mkdir django-todo-backend             |    1 - mkdir django-todo-backend 
+2 - cd django-todo-backend                |    2 - cd django-todo-backend
+3 - py -m pip install --user virtualenv   |    3 - python3 -m pip install --user virtualenv
+4 - python -m venv venv                   |    4 - python3 -m venv env
+5 - venv\Scripts\activate.bat             |    5 - source venv/bin/activate
+6 - python -m pip install Django          |    6 - python -m pip install Django
+
+******************************************************************************************
+
+
+******************************* Creating a Django Project ********************************
+
+1 - django-admin startproject todo_backend
+2 - cd todo_backend
+3 - python manage.py startapp api
+4 - ADD "api" to todo_backend/settings.py [INSTALLED_APPS]
+5 - python manage.py migrate
+6 - create django model
+7 - python manage.py makemigrations api
+8 - python manage.py sqlmigrate api 0001
+9 - python manage.py migrate
+
+10 - Create Superuser for Admin portal ( python manage.py createsuperuser )
+11 - python manage.py runserver
+12 - register Todo model in api/admin.py
+13 - add string representation to api/models.py
+
+******************************************************************************************
+
+
+******************** Django rest framework ***********************************************
+
+1 - python -m pip install djangorestframework
+2 - Add "rest_framework" to todo_backend/settings.py [INSTALLED_APPS]
+3 - Create TodoSerializer in api
+4 - Create Endpoint (View)
+5 - Add routing to todo_backend/urls.py
+6 - python manage.py runserver
